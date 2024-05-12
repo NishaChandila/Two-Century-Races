@@ -1,24 +1,36 @@
 #  USA Ultramarathon Trends: Insights & Performance
 
-**Overview and Approach:**
-The project focuses on analyzing data from ultramarathon events held in the USA in the year 2020, specifically looking at races with distances of either 50 kilometers or 50 miles. The dataset includes information about the athletes' performance, age, gender, and other relevant details. The primary goal is to gain insights into athlete demographics, performance trends, and age group performance in these endurance races.
+**Objective:**
+
+**Data Cleaning:**
+
+**i)** For USA race events with distances of 50 km or 50 mi in the year 2020.
+**ii)** Obtaining athlete age.
+**iii)** Dropping irrelevant columns.
+**iv)** Checking for NA values, duplicates, fixing data types, renaming columns, and reordering columns.
 
 
-**Key Findings:**
-**1) Data Cleaning:** The dataset was cleaned to include only races held in the USA, with distances of 50k or 50mi, and limited to the year 2020. Additionally, irrelevant columns were dropped, NA values were removed, and data types were adjusted for analysis.
+**Exploratory Data Analysis (EDA):**
 
-**2) Exploratory Data Analysis (EDA):** EDA was conducted using various visualization techniques such as histogram plots, distribution plots, violin plots, and regression plots to understand the distribution of race lengths, athlete performance, average speed, gender distribution, and age distribution.
+**i)** Plotting histograms, distribution plots, violin plots, and lmplots.
 
-**3) Age Group Performance:**
-**i)Best Age Groups:** Age groups with 20 or more races were analyzed to identify the top performers. These groups demonstrate consistent performance and endurance over multiple races, indicating their proficiency in ultramarathon events.
-**ii)Worst Age Groups:** Age groups with 10 or more races were examined to highlight areas for improvement or lower performance. Insights from these groups can help in understanding factors affecting performance and identifying areas for potential training focus.
+**ii)** Calculating the mean difference in speed between male and female athletes, identifying the age group with the best and worst performances in the 50 mi race.
 
+**Steps Taken:**
 
-**Insights:**
-1) Athlete performance and age seem to have a significant relationship, with certain age groups showing better endurance and consistency in race results.
-2) Gender distribution across races and age groups can provide insights into the participation patterns and potential differences in performance between male and female athletes.
-3) The distribution of race lengths and athlete performance can highlight trends in the popularity and difficulty of different distances among ultramarathon runners.
+**STEP 1:-** Import libraries and load dataset.
+**STEP 2:-** Create df2 to filter USA races for 50 km and 50 mi distances in 2020.
+**STEP 3:-** Retrieve athlete age from the athlete year of birth and remove 'h' from athlete performance.
+**STEP 4:-** Drop columns: athlete club, athlete country, athlete year of birth, athlete age category.
+**STEP 5:-** Check for duplicates, drop NA values, and reset index.
+**STEP 6:-** Check and fix data types, rename columns, and reorder them.
+**STEP 7:-** Plot histogram for race length.
+**STEP 8:-** Plot distribution plot for athlete average speed.
+**STEP 9:-** Plot violin plot for race length and athlete average speed.
+**STEP 10:-** Group data by race length and athlete gender, then calculate the mean of athlete average speeds.
+**STEP 11:-** Determine the average speed for each age group in the 50-mile race, identifying both the best and worst performances.
 
 
 **Conclusion:**
-The analysis of ultramarathon race data from the USA in 2020 provides valuable insights into athlete demographics, performance trends, and age group performance. By focusing on data cleaning, exploratory data analysis, and age group performance evaluation, this project offers actionable insights for athletes, coaches, and event organizers to enhance training strategies, improve performance, and tailor event experiences to participant demographics. Further research could delve deeper into specific factors influencing athlete performance and explore strategies for optimizing training and race preparation across different age groups.
+
+Through comprehensive data cleaning and exploratory analysis, insights were gained into the USA race events with distances of 50 km or 50 mi in 2020. Key findings include the mean difference in speed between male and female athletes and the identification of age groups with the best and worst performances in the 50 mi race. These insights lay the foundation for further analysis and decision-making in race event planning and athlete performance evaluation.
