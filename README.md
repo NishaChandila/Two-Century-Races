@@ -1,46 +1,69 @@
-#  USA Ultramarathon Trends: Insights & Performance
+## Ultramarathon Trends: Insights & Performance
 
-**Objective:**
+This repository contains a comprehensive analysis of ultramarathon race data from the USA, focusing on races with distances of 50 km or 50 mi in the year 2020. The project involved cleaning and analyzing the data to uncover trends and performance insights, particularly in relation to athlete performance by age and gender.
 
-**Data Cleaning:**
+**Project Overview**
 
-**i)** For USA race events with distances of 50 km or 50 mi in the year 2020.
-**ii)** Obtaining athlete age.
-**iii)** Dropping irrelevant columns.
-**iv)** Checking for NA values, duplicates, fixing data types, renaming columns, and reordering columns.
+**Objective**
 
+The primary objective of this project was to analyze ultramarathon race events in the USA with distances of 50 km and 50 mi during 2020. The goal was to gain insights into athlete performance, particularly the differences in speed between male and female athletes and the performance of different age groups in the 50 mi race.
+
+**Problem Statement**
+
+The dataset contained raw data that required extensive cleaning to ensure accuracy and reliability in the analysis. The main challenges included filtering relevant race events, calculating athlete ages, handling missing values, and preparing the data for exploratory analysis. Additionally, it was essential to visualize the data to uncover meaningful trends and performance metrics.
+
+**Solution**
+
+To address these challenges, the following steps were taken:
+
+**1. Data Cleaning:**
+
+1. Filtered the dataset to focus on USA race events with distances of 50 km or 50 mi in 2020.
+
+2. Retrieved athlete ages from their year of birth.
+ 
+3. Removed irrelevant columns, such as athlete club, country, year of birth, and age category.
+
+4. Checked for and removed duplicate entries and NA values, then reset the index.
+
+5. Fixed data types, renamed columns for clarity, and reordered columns for better readability.
 
 **Exploratory Data Analysis (EDA):**
 
-**i)** Plotting histograms, distribution plots, violin plots, and lmplots.
+1. Plotted histograms to visualize the distribution of race lengths.
 
-**ii)** Calculating the mean difference in speed between male and female athletes, identifying the age group with the best and worst performances in the 50 mi race.
+2. Created distribution plots to analyze athlete average speeds.
 
-**Steps Taken:**
+3. Used violin plots to compare race length and athlete average speed distributions.
 
-**STEP 1:-** Import libraries and load dataset.
+4. Calculated the mean difference in speed between male and female athletes.
 
-**STEP 2:-** Create df2 to filter USA races for 50 km and 50 mi distances in 2020.
+5. Identified the age groups with the best and worst performances in the 50 mi race by calculating the average speeds.
 
-**STEP 3:-** Retrieve athlete age from the athlete year of birth and remove 'h' from athlete performance.
+**Tools Used**
 
-**STEP 4:-** Drop columns: athlete club, athlete country, athlete year of birth, athlete age category.
+**Python: **For data cleaning, manipulation, and analysis.
 
-**STEP 5:-** Check for duplicates, drop NA values, and reset index.
+**Pandas:** To filter data, handle missing values, and perform grouping and aggregation.
 
-**STEP 6:-** Check and fix data types, rename columns, and reorder them.
+**Matplotlib/Seaborn:** For creating visualizations like histograms, distribution plots, and violin plots.
 
-**STEP 7:-** Plot histogram for race length.
+**Jupyter Notebook:** To document the data cleaning process, perform exploratory analysis, and visualize findings.
 
-**STEP 8:-** Plot distribution plot for athlete average speed.
+**Key Steps in the Analysis**
 
-**STEP 9:-** Plot violin plot for race length and athlete average speed.
+**1. Import Libraries and Load Dataset:** The necessary Python libraries were imported, and the dataset was loaded for processing.
 
-**STEP 10:-** Group data by race length and athlete gender, then calculate the mean of athlete average speeds.
+**2. Data Filtering:** A filtered DataFrame (df2) was created to focus on USA races with 50 km and 50 mi distances in 2020.
 
-**STEP 11:-** Determine the average speed for each age group in the 50-mile race, identifying both the best and worst performances.
+**3. Age Calculation and Data Cleaning:** Athlete ages were calculated from their year of birth, and unnecessary characters (like 'h' in performance data) were removed. Irrelevant columns were dropped.
 
+**4. Data Quality Checks:** The dataset was checked for duplicates, missing values were handled, and the data types were corrected. Columns were renamed and reordered for clarity.
 
-**Conclusion:**
+**5. Visualization and Analysis:** Various plots were created to visualize race length distributions, athlete average speeds, and performance comparisons across different demographics.
 
-Through comprehensive data cleaning and exploratory analysis, insights were gained into the USA race events with distances of 50 km or 50 mi in 2020. Key findings include the mean difference in speed between male and female athletes and the identification of age groups with the best and worst performances in the 50 mi race. These insights lay the foundation for further analysis and decision-making in race event planning and athlete performance evaluation.
+**6. Performance Insights:** The mean difference in speeds between male and female athletes was calculated, and the best and worst performing age groups in the 50 mi race were identified.
+
+**Conclusion**
+
+Through detailed data cleaning and exploratory analysis, the project provided valuable insights into ultramarathon race events in the USA for 2020. The analysis revealed key trends, such as the difference in speeds between male and female athletes and the performance of various age groups in long-distance races. These insights can be instrumental in guiding future race event planning and evaluating athlete performance.
