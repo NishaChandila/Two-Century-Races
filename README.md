@@ -42,7 +42,7 @@ To address these challenges, the following steps were taken:
 
 **Tools Used**
 
-**Python: **For data cleaning, manipulation, and analysis.
+**Python:** For data cleaning, manipulation, and analysis.
 
 **Pandas:** To filter data, handle missing values, and perform grouping and aggregation.
 
