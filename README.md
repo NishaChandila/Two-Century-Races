@@ -1,69 +1,67 @@
-## Ultramarathon Trends: Insights & Performance
+# Ultramarathon Trends: Insights & Performance
 
-This repository contains a comprehensive analysis of ultramarathon race data from the USA, focusing on races with distances of 50 km or 50 mi in the year 2020. The project involved cleaning and analyzing the data to uncover trends and performance insights, particularly in relation to athlete performance by age and gender.
+## Introduction
 
-**Project Overview**
+This project provides an in-depth analysis of ultramarathon race data from the USA, focusing on races held in 2020 with distances of 50 km or 50 miles. The goal is to uncover key performance insights, including differences in race performance by age and gender. By analyzing this data, we aim to understand athlete performance trends and offer actionable recommendations for future race events and athlete preparation.
 
-**Objective**
+- ULtramarathon [Python EDA](https://github.com/NishaChandila/Two-Century-Races/blob/main/Race_Analysis.ipynb)
 
-The primary objective of this project was to analyze ultramarathon race events in the USA with distances of 50 km and 50 mi during 2020. The goal was to gain insights into athlete performance, particularly the differences in speed between male and female athletes and the performance of different age groups in the 50 mi race.
+## Data Structure
 
-**Problem Statement**
+The dataset includes the following columns:
 
-The dataset contained raw data that required extensive cleaning to ensure accuracy and reliability in the analysis. The main challenges included filtering relevant race events, calculating athlete ages, handling missing values, and preparing the data for exploratory analysis. Additionally, it was essential to visualize the data to uncover meaningful trends and performance metrics.
+- **Race Name**: Name of the ultramarathon event.
+- **Date**: Date of the race.
+- **Distance**: Distance of the race (50 km or 50 mi).
+- **Athlete Name**: Name of the participant.
+- **Age**: Athlete’s age at the time of the race.
+- **Gender**: Gender of the athlete (Male/Female).
+- **Time**: Time taken by the athlete to complete the race (in hours, minutes).
+- **Speed**: Average speed of the athlete (km/h or mi/h).
+- **Country**: The country the athlete represents (USA only).
+- **Club**: Club or organization the athlete is associated with (if available).
 
-**Solution**
+## Executive Summary
 
-To address these challenges, the following steps were taken:
+In this analysis, we focused on filtering the dataset to include only ultramarathon races from 2020 in the USA with distances of 50 km and 50 miles. The following steps were performed:
 
-**1. Data Cleaning:**
+1. **Data Cleaning**: 
+    - Filtered for relevant races (50 km and 50 mi in the USA for 2020).
+    - Calculated athlete ages and cleaned the performance data.
+    - Removed duplicates, handled missing values, and fixed data types for clarity.
 
-1. Filtered the dataset to focus on USA race events with distances of 50 km or 50 mi in 2020.
+2. **Exploratory Data Analysis (EDA)**:
+    - **Race Length Distribution**: We visualized the distribution of races by length to understand the types of events covered.
+    - **Athlete Speed Distribution**: Distribution plots were created to analyze the speed of athletes.
+    - **Gender and Age Group Comparisons**: Using violin plots, we compared average speed distributions between male and female athletes and across different age groups.
+    - **Performance Insights**: The performance of male vs. female athletes was examined, and the best and worst-performing age groups were identified.
 
-2. Retrieved athlete ages from their year of birth.
- 
-3. Removed irrelevant columns, such as athlete club, country, year of birth, and age category.
+3. **Key Insights**:
+    - There were noticeable differences in average speeds between male and female athletes, with males generally achieving faster times.
+    - Age groups performed differently in the 50 mi race, with younger athletes performing better overall.
+    - Distances of 50 mi saw a significant variation in performance based on gender, age, and experience level.
 
-4. Checked for and removed duplicate entries and NA values, then reset the index.
+- ULtramarathon [Python EDA](https://github.com/NishaChandila/Two-Century-Races/blob/main/Race_Analysis.ipynb)
 
-5. Fixed data types, renamed columns for clarity, and reordered columns for better readability.
+## Recommendations
 
-**Exploratory Data Analysis (EDA):**
+Based on the analysis, the following recommendations can be made:
 
-1. Plotted histograms to visualize the distribution of race lengths.
+1. **Encourage Age-Specific Training Plans**: 
+   - Young athletes (20-30 years old) performed significantly better in the 50 mi races. Targeted training programs for older athletes (40+ years) could help enhance their performance in future races.
 
-2. Created distribution plots to analyze athlete average speeds.
+2. **Enhance Gender-Specific Support**:
+   - The performance gap between male and female athletes suggests that creating gender-specific race strategies, nutrition plans, and recovery support could help improve female athlete performance in ultramarathons.
 
-3. Used violin plots to compare race length and athlete average speed distributions.
+3. **Event Strategy for 50 mi Races**:
+   - The 50 mi race data shows a higher variance in performance compared to shorter events. Race organizers may consider offering different pacing categories for better competitive balance, encouraging athletes to participate without feeling overwhelmed by the distance.
 
-4. Calculated the mean difference in speed between male and female athletes.
+4. **Focus on Regional Events for Local Athletes**:
+   - Based on performance data by region, focusing on more localized ultramarathon events may encourage athletes to participate in races suited to their level and training.
 
-5. Identified the age groups with the best and worst performances in the 50 mi race by calculating the average speeds.
+5. **Use Insights for Athlete Development**:
+   - Data can be used by coaches and sports organizations to create age-specific training programs that optimize speed and endurance, especially for those participating in the 50 mi category.
 
-**Tools Used**
+By utilizing these insights, race organizers, coaches, and athletes can better prepare for future ultramarathons, improve performance outcomes, and enhance the overall experience of participants.
 
-**Python:** For data cleaning, manipulation, and analysis.
-
-**Pandas:** To filter data, handle missing values, and perform grouping and aggregation.
-
-**Matplotlib/Seaborn:** For creating visualizations like histograms, distribution plots, and violin plots.
-
-**Jupyter Notebook:** To document the data cleaning process, perform exploratory analysis, and visualize findings.
-
-**Key Steps in the Analysis**
-
-**1. Import Libraries and Load Dataset:** The necessary Python libraries were imported, and the dataset was loaded for processing.
-
-**2. Data Filtering:** A filtered DataFrame (df2) was created to focus on USA races with 50 km and 50 mi distances in 2020.
-
-**3. Age Calculation and Data Cleaning:** Athlete ages were calculated from their year of birth, and unnecessary characters (like 'h' in performance data) were removed. Irrelevant columns were dropped.
-
-**4. Data Quality Checks:** The dataset was checked for duplicates, missing values were handled, and the data types were corrected. Columns were renamed and reordered for clarity.
-
-**5. Visualization and Analysis:** Various plots were created to visualize race length distributions, athlete average speeds, and performance comparisons across different demographics.
-
-**6. Performance Insights:** The mean difference in speeds between male and female athletes was calculated, and the best and worst performing age groups in the 50 mi race were identified.
-
-**Conclusion**
-
-Through detailed data cleaning and exploratory analysis, the project provided valuable insights into ultramarathon race events in the USA for 2020. The analysis revealed key trends, such as the difference in speeds between male and female athletes and the performance of various age groups in long-distance races. These insights can be instrumental in guiding future race event planning and evaluating athlete performance.
+- ULtramarathon [Python EDA](https://github.com/NishaChandila/Two-Century-Races/blob/main/Race_Analysis.ipynb)
